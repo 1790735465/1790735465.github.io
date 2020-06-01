@@ -106,8 +106,8 @@ function activateLightMode(){
 
 var guestInfo = requestSetting(['nick','mail','link'],'昵称,邮箱,主页')
 var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
-let friends = 'a15096f80be98ea52f183e3f4c9aeeae'.split(',')
-let master = 'af0f3d77efec1826d34eb57e2fa7cb25'.split(',')
+let friends = 'ce2266d4e91782573b50c29e06a811e4'.split(',')
+let master = 'd799cdaab02b754cb52617372d860835'.split(',')
 
 window.valine = new Valine({
   el:'#vcomment',
@@ -115,7 +115,7 @@ window.valine = new Valine({
   appKey: 'UhJiKPdHOOIQ9G7Duuj2l7br',
   notify: false,
   verify: false,
-  placeholder: 'Demo站的评论不会处理！',
+  placeholder: '请不要说脏话哦！',
   avatar: 'monsterid',
   meta: guestInfo,
   pageSize: '10',
