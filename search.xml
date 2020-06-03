@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>idea创建springboot项目</title>
+      <link href="/posts/579658706/"/>
+      <url>/posts/579658706/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603092934.png" alt></p><h1 id="选择springboot下载地址"><a href="#选择springboot下载地址" class="headerlink" title="选择springboot下载地址"></a>选择springboot下载地址</h1><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603093126.png" alt></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">阿里云地址&gt;&gt;&gt; https:<span class="comment">//start.aliyun.com/</span></span><br></pre></td></tr></table></figure><p>点击Next下一步</p><h1 id="项目命名"><a href="#项目命名" class="headerlink" title="项目命名"></a>项目命名</h1><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603093838.png" alt></p><h1 id="选择项目所需要的依赖"><a href="#选择项目所需要的依赖" class="headerlink" title="选择项目所需要的依赖"></a>选择项目所需要的依赖</h1><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603094206.png" alt></p><h1 id="确认项目名字"><a href="#确认项目名字" class="headerlink" title="确认项目名字"></a>确认项目名字</h1><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603094337.png" alt></p><p>第一次创建需要下载springboot的依赖,需要等待一会,</p><h1 id="创建成功"><a href="#创建成功" class="headerlink" title="创建成功"></a>创建成功</h1><p><img src="/posts/579658706/a.png" alt></p><h1 id="输出spirngboot的Helloworld"><a href="#输出spirngboot的Helloworld" class="headerlink" title="输出spirngboot的Helloworld"></a>输出spirngboot的Helloworld</h1><p>在com.csde的目录下创建一个controller文件夹</p><p>并在controller文件夹创建一个HelloWorld控制器</p><p>目录如下</p><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603095228.png" alt></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"HelloWorld"</span>);</span><br><span class="line">        <span class="keyword">return</span>  <span class="string">"HelloWorld"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>启动spring boot项目</p><p>在网页上访问: <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> </p><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200603095629.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> springboot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> idea </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo | 博客优化</title>
       <link href="/posts/2199413063/"/>
       <url>/posts/2199413063/</url>
