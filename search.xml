@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>Centos安装Dokcer</title>
+      <link href="/posts/1565438925/"/>
+      <url>/posts/1565438925/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p> 要安装Docke , 您需要一个CentOS 7.x以上的维护版本。不支持或未测试存档版本。 </p><h1 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /] yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure><h1 id="安装需要的软件包"><a href="#安装需要的软件包" class="headerlink" title="安装需要的软件包"></a>安装需要的软件包</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /] yum install -y yum-utils</span><br></pre></td></tr></table></figure><h1 id="设置镜像仓库"><a href="#设置镜像仓库" class="headerlink" title="设置镜像仓库"></a>设置镜像仓库</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /] yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><h1 id="更新yum软件包索引"><a href="#更新yum软件包索引" class="headerlink" title="更新yum软件包索引"></a>更新yum软件包索引</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /]yum makecache fast</span><br></pre></td></tr></table></figure><h1 id="安装-Docker-CE-社区版"><a href="#安装-Docker-CE-社区版" class="headerlink" title="安装 Docker CE(社区版)"></a>安装 Docker CE(社区版)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen &#x2F;]yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h1 id="启动停止重启Docker"><a href="#启动停止重启Docker" class="headerlink" title="启动停止重启Docker"></a>启动停止重启Docker</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /]systemctl start docker #启动docker</span><br><span class="line">[root@xingzhen /]systemctl stop docker  #停止docker</span><br><span class="line">[root@xingzhen /]systemctl restart docker #重启docker</span><br></pre></td></tr></table></figure><h1 id="hello-world-Docker"><a href="#hello-world-Docker" class="headerlink" title="hello-world Docker"></a>hello-world Docker</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /]docker run hello-world</span><br><span class="line"></span><br><span class="line">Unable to find image 'hello-world:latest' locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">0e03bdcc26d7: Pull complete </span><br><span class="line">Digest: sha256:49a1c8800c94df04e9658809b006fd8a686cab8028d33cfba2cc049724254202</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!#出现这个表示安装成功</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"><span class="meta"> $</span><span class="bash"> docker run -it ubuntu bash</span></span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure><h1 id="配置阿里云镜像加速"><a href="#配置阿里云镜像加速" class="headerlink" title="配置阿里云镜像加速"></a>配置阿里云镜像加速</h1><p><strong>我们在下载东西的时候,可以发现下载镜像特别慢,所有我们要配置阿里云镜像加速</strong></p><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200728093047.png" alt></p><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200728093338.png" alt></p><h1 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /]yum remove docker-ce docker-ce-cli containerd.io #卸载Docker，CLI和Containerd软件包：</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@xingzhen /]rm -rf /var/lib/docker #主机上的映像，容器，卷或自定义配置文件不会自动删除。要删除所有图像，容器和卷：</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux操作系统 </category>
+          
+          <category> centos7.4 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mysql8.0密码加密规则修改</title>
+      <link href="/posts/1723764238/"/>
+      <url>/posts/1723764238/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>通过Docker安装mysql8.x版本以后,通过本地连接服务器的mysql,发现了问题</p><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200725092658.png" alt></p><p>通过百度知道找到</p><p> <strong>出现这个原因是mysql8.0 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password, 解决此问题方法有两种,一种是升级客户端驱动,一种是把mysql用户登录密码加密规则还原成mysql_native_password。</strong> </p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 修改密码并指定加密规则为mysql_native_password</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'%'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'root'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 刷新权限</span></span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/1790735465/butterfly_image/img/20200725093422.png" alt></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用git向github远程仓库推送文件</title>
       <link href="/posts/2102250240/"/>
       <url>/posts/2102250240/</url>
